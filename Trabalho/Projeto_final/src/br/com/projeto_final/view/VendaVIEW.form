@@ -77,8 +77,8 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="TotalVenda" min="-2" pref="108" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="TotalVenda" min="-2" pref="120" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                           <Component id="jScrollPane3" alignment="1" min="-2" pref="399" max="-2" attributes="0"/>
@@ -107,7 +107,7 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jScrollPane3" min="-2" pref="104" max="-2" attributes="0"/>
-                  <EmptySpace pref="52" max="32767" attributes="0"/>
+                  <EmptySpace pref="68" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel3" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                       <Component id="TotalVenda" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -175,10 +175,13 @@
         <Component class="javax.swing.JLabel" name="TotalVenda">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Ubuntu" size="48" style="0"/>
+              <Font name="Ubuntu" size="24" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="0.00"/>
           </Properties>
+          <Events>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="TotalVendaPropertyChange"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnPesquisarCli">
           <Properties>
@@ -382,6 +385,9 @@
                   <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtl_consultar_pro_selecionadoKeyPressed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

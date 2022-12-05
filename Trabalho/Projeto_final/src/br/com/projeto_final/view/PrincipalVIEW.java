@@ -64,6 +64,13 @@ public class PrincipalVIEW extends javax.swing.JFrame {
         vendaVIEW.setPosicao();
     }
     
+    private void abreRelatorioVIEW() {
+        RelatorioVIEW relatorioVIEW = new RelatorioVIEW();
+        this.desktopPane.add(relatorioVIEW);
+        relatorioVIEW.setVisible(true);
+        relatorioVIEW.setPosicao();
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -87,6 +94,7 @@ public class PrincipalVIEW extends javax.swing.JFrame {
         itemMenuProduto = new javax.swing.JMenuItem();
         itemClienteMenu = new javax.swing.JMenuItem();
         itemMenuVenda = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
         menuSair = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -134,6 +142,19 @@ public class PrincipalVIEW extends javax.swing.JFrame {
             }
         });
         menuBar.add(itemMenuVenda);
+
+        jMenu1.setText("Relatorio");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
+        menuBar.add(jMenu1);
 
         menuSair.setMnemonic('h');
         menuSair.setText("Sair");
@@ -185,6 +206,15 @@ public class PrincipalVIEW extends javax.swing.JFrame {
         abreVendaVIEW();
     }//GEN-LAST:event_itemMenuVendaMouseClicked
 
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+       // TODO add your handling code here:
+       abreRelatorioVIEW();
+    }//GEN-LAST:event_jMenu1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -229,6 +259,7 @@ public class PrincipalVIEW extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemMenuFornecedor;
     private javax.swing.JMenuItem itemMenuProduto;
     private javax.swing.JMenu itemMenuVenda;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenu menuCadastro;
     private javax.swing.JMenu menuSair;
